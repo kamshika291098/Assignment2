@@ -1,0 +1,212 @@
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~ (master)
+$ cd Documents/
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents (master)
+$ mkdir ass2
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents (master)
+$ cd ass2
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (master)
+$ git init
+Initialized empty Git repository in C:/Users/Kamshika/Documents/ass2/.git/
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (master)
+$ touch file1.txt
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (master)
+$ vi file1.txt
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (master)
+$ git add file1.txt
+warning: LF will be replaced by CRLF in file1.txt.
+The file will have its original line endings in your working directory
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file1.txt
+
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (master)
+$ git commit -m "this is my assignment2"
+[master (root-commit) dd40318] this is my assignment2
+ 1 file changed, 23 insertions(+)
+ create mode 100644 file1.txt
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (master)
+$ git remote add origin https://github.com/kamshika291098/Assignment2.git
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 753 bytes | 753.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/kamshika291098/Assignment2/pull/new/master
+remote:
+To https://github.com/kamshika291098/Assignment2.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (master)
+$ git checkout -b branch1
+Switched to a new branch 'branch1'
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (branch1)
+$ touch file3.txt
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (branch1)
+$ git status
+On branch branch1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (branch1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (master)
+$ git checkout branch1
+Switched to branch 'branch1'
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (branch1)
+$ ls
+file1.txt  file3.txt
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (branch1)
+$ vi file3.txt
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (branch1)
+$ git status
+On branch branch1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (branch1)
+$ add file3.txt
+bash: add: command not found
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (branch1)
+$ git add file3.txt
+warning: LF will be replaced by CRLF in file3.txt.
+The file will have its original line endings in your working directory
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (branch1)
+$ git status
+On branch branch1
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file3.txt
+
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (branch1)
+$ git commit -m "I am commiting with new branch1"
+[branch1 1b70492] I am commiting with new branch1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file3.txt
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (branch1)
+$ git status
+On branch branch1
+nothing to commit, working tree clean
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (branch1)
+$ git log
+commit 1b70492bdae53f86629a5c3492126524007bb081 (HEAD -> branch1)
+Author: kamshika291098 <kamshikak@gmail.com>
+Date:   Sat Sep 11 17:44:46 2021 +0530
+
+    I am commiting with new branch1
+
+commit dd4031807c021660d369fdf53d5641253226917c (origin/master, master)
+Author: kamshika291098 <kamshikak@gmail.com>
+Date:   Sat Sep 11 16:44:00 2021 +0530
+
+    this is my assignment2
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (branch1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (master)
+$ git checkout branch1
+Switched to branch 'branch1'
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (branch1)
+$ git remote add origin https://github.com/kamshika291098/Assignment2.git
+error: remote origin already exists.
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (branch1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (master)
+$ git remote add origin https://github.com/kamshika291098/Assignment2.git
+error: remote origin already exists.
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (master)
+$ git remote add branch1 https://github.com/kamshika291098/Assignment2.git
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (master)
+$ git checkout branch1
+Switched to branch 'branch1'
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (branch1)
+$ git remote add branch1 https://github.com/kamshika291098/Assignment2.git
+error: remote branch1 already exists.
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (branch1)
+$ git remote add branch2 https://github.com/kamshika291098/Assignment2.git
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (branch1)
+$ git status
+On branch branch1
+nothing to commit, working tree clean
+
+Kamshika@LAPTOP-GU570J8C MINGW64 ~/Documents/ass2 (branch1)
+$
+
