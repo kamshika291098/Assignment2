@@ -1,4 +1,5 @@
-# Assignment2Try these and copy your command and message, paste it in file and submit. you should
+# Assignment2
+Try these and copy your command and message, paste it in file and submit. you should
 include these two repository links in the file.
 Q1.
 1. Create a repository for your Team Software Project
